@@ -165,7 +165,8 @@ function (_Handler) {
         _this3._tracks.add(track); // Hack: Create a new stream with track.streamReactTag as id.
 
 
-        stream = new MediaStream(track.streamReactTag); // Add the track to the stream.
+        // stream = new MediaStream(track.streamReactTag); // Add the track to the stream.
+        stram = new MediaStream();
 
         stream.addTrack(track); // Add the stream to the PeerConnection.
 
@@ -235,7 +236,8 @@ function (_Handler) {
         _this4._tracks["delete"](track); // Hack: Create a new stream with track.streamReactTag as id.
 
 
-        var stream = new MediaStream(track.streamReactTag); // Add the track to the stream.
+        // var stream = new MediaStream(track.streamReactTag); // Add the track to the stream.
+        var stram = new MediaStream();
 
         stream.addTrack(track); // Remove the stream from the PeerConnection.
 
@@ -287,8 +289,8 @@ function (_Handler) {
         _this5._tracks["delete"](oldTrack); // Hack: Create a new stream with track.streamReactTag as id.
 
 
-        stream = new MediaStream(track.streamReactTag); // Add the track to the stream and remove the old one.
-
+        // stream = new MediaStream(track.streamReactTag); // Add the track to the stream and remove the old one.
+        stram = new MediaStream();
         stream.addTrack(track);
         stream.removeTrack(oldTrack); // Add the stream to the PeerConnection.
 
